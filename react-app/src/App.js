@@ -1,11 +1,26 @@
 import React from 'react';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      txt: 'this is the state txt',
+      cat: 0
+    }
+  }
+
+  // custom method to manage state
+  update(event) {
+    // set the state to whatever is input into input field (form value)
+    this.setState({txt: event.target.value})
+  }
+
   render() {
-    let txt = this.props.txt
+    /* let txt = this.props.txt // pass in props */
     return (
       <div>
-        <h1>{txt}</h1>
+        <input type="text" onChange={this.update.bind(this)}/>
+        <h1>{this.state.txt} - {this.state.cat}</h1>
       </div>
     )
   }
