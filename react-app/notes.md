@@ -20,9 +20,15 @@ You can pass them in the render using **{this.props.<keyname>}**
 *State* are a collection of values that are managed and updated by components.
 
 ## The constructor method
+
 **super();** will give the keyword *this* the context within the component rather than its parent class (React.component).
 
 Set your initial state inside the constructor method inside **this.state = {}**.
+
+## React components
+
+React components can output/render other react components.
+
 
 ## Additional Notes
 

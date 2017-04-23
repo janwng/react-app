@@ -19,12 +19,16 @@ class App extends React.Component {
     /* let txt = this.props.txt // pass in props */
     return (
       <div>
-        <input type="text" onChange={this.update.bind(this)}/>
         <h1>{this.state.txt} - {this.state.cat}</h1>
+        <Widget update={this.update.bind(this)} />
       </div>
     )
   }
 }
+
+const Widget = (props) =>
+  <input type="text" onChange={props.update}/>
+
 
 // set the type for properties being passed in
 App.propTypes = {
